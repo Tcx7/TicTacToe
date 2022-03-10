@@ -39,3 +39,10 @@ body {
 .player2 {
   height: 15%;
 }
+
+.userInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}

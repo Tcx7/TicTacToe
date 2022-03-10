@@ -11,6 +11,7 @@ function createBoard() {
   for (let i = 0; i < 9; i++) {
     var createElem = document.createElement("div");
     createElem.setAttribute("id", `${i}`);
+    createElem.classList.add("userInput");
     createElem.addEventListener("click", xo);
     container.appendChild(createElem);
     var elemStyle = document.getElementById(`${i}`);
@@ -28,7 +29,7 @@ function xo(e) {
       checkWinner();
       playerTurn = playerTurn = 1; //switch to player 2
     } else {
-      alert("can't pick this again :(");
+      alert("can't pick this again!");
     }
   } else {
     if (!e.target.innerHTML) {
@@ -38,7 +39,7 @@ function xo(e) {
 
       playerTurn = playerTurn = 0; //switch to player 1
     } else {
-      alert("can't pick this again :(");
+      alert("can't pick this again!");
     }
   }
 }
@@ -136,7 +137,10 @@ function checkWinner() {
     }
   }
   if (div2 && div4 && div6) {
-    if (TicTacToe[0][2] === TicTacToe[1][1] && TicTacToe[2][0]) {
+    if (
+      TicTacToe[0][2] === TicTacToe[1][1] &&
+      TicTacToe[0][2] === TicTacToe[2][0]
+    ) {
       playerwins();
     }
   }
