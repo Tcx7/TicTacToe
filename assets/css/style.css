@@ -1,0 +1,41 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startGame {
+  height: 5%;
+  width: 10%;
+}
+
+.container {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player1 {
+  height: 15%;
+}
+
+#box-container {
+  height: 70%;
+  width: 80%;
+  margin: 0% 8%;
+  display: grid;
+  /* border: 1px;
+  border-style: solid; */
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.player2 {
+  height: 15%;
+}
